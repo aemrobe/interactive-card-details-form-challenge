@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Space-Grotesk";
+  src: url("./font-family/static/SpaceGrotesk-Medium.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /*font family*/
+  --font-ff-space-grotest-medium: "Space-Grotesk";
+
+  /*font size*/
+  --font-size-1: 1.8rem;
+
+  /*color*/
+  --linear-gradient-active-border: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --color-red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-size: var(--font-size-1);
+  font-family: var(--font-ff-space-grotest-medium);
+  min-height: 100vh;
+}
+
+main {
+}
+
+.credit-card {
+  outline: 2px solid lime;
+  background-image: url("./images/bg-main-mobile.png");
+  padding: 3rem 1.4rem;
+  margin-bottom: 8rem;
+  height: 25rem;
+  position: relative;
+}
+
+.card {
+  outline: 1px solid lime;
+  position: absolute;
+  border-radius: 8px;
+  color: var(--white);
+  width: 89%;
+  max-width: 29.7rem;
+  min-height: 15.5rem;
+  padding: 1.8rem 2.2rem 2.3rem 2rem;
+}
+
+.card__logo {
+  width: 5.4rem;
+  margin-bottom: 3.5rem;
+}
+
+/*card information*/
+.card__information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__number {
+  margin-bottom: 1.8rem;
+  letter-spacing: 2px;
+  font-size: 1.85rem;
+}
+
+.card__name,
+.card__exp {
+  font-size: 1.1rem;
+  color: var(--Light-grayish-violet);
+}
+
+.card__name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card--front {
+  background-image: url("./images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(4.2rem) translateX(-2rem);
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.card--back {
+  min-height: 16.6rem;
+  background-image: url("./images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  transform: translateY(3rem) translateX(2.8rem);
+}
+
+.card--back .card__number {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateX(-7rem) translateY(-50%);
+  font-size: 1.2rem;
+}
+/*form*/
+.form {
+  padding: 0 2.3rem;
+}
+
+label {
+  display: block;
+  padding: 2.2rem 0 0;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: var(--very-dark-violet);
+}
+
+/*form control group*/
+.form-control-group {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.input-border-wrapper {
+  margin-top: 0.7rem;
+  border: none;
+  border-radius: 9px;
+  background: var(--Light-grayish-violet);
+  padding: 0.1rem;
+}
+
+.form-control {
+  width: 50%;
+  min-width: 16rem;
+}
+
+input {
+  display: block;
+  padding: 1.6rem 1.7rem 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+}
+
+input::placeholder {
+  font-family: var(--font-ff-space-grotest-medium);
+  color: var(--Light-grayish-violet);
+  font-size: 1.8rem;
+}
+
+.form-control-group input {
+  display: inline-block;
+  width: auto;
+}
+
+.error-msg {
+  font-size: 1.2rem;
+  color: var(--color-red);
+  margin-top: 0.5rem;
+}
+
+/* the first elements which has a class of the form control*/
+.form-control:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-control:nth-child(1) label {
+  width: 100%;
+}
+
+label[for="exp-date"] ~ .input-border-wrapper {
+  width: 44%;
+  min-width: 7.8rem;
+}
+
+.form-control:nth-child(1) input {
+  width: 100%;
+}
+
+.form-control:nth-child(1) .input-border-wrapper + .input-border-wrapper {
+  margin-left: 0.6rem;
+}
+
+/* the element which has a form-control class for the second time */
+.form-control:nth-child(2) {
+  padding-left: 1.1rem;
+}
+
+.form-control:nth-child(2) input {
+  width: 100%;
+}
+
+button {
+  margin-top: 2.7rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  background: var(--very-dark-violet);
+  color: var(--Light-grayish-violet);
+  font-size: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.thankyou {
+  margin-top: 10rem;
+}
+
+.complete-image {
+  display: block;
+  margin: 0 auto 4rem;
+}
+
+.thankyou__text {
+  text-transform: uppercase;
+  color: var(--very-dark-violet);
+  font-size: 3rem;
+  letter-spacing: 1.8px;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.thankyou_text-2 {
+  text-align: center;
+  color: var(--dark-grayish-violet);
+  margin-bottom: 4.8rem;
+}
+
+.thankyou__btn {
+  width: 86.9% !important;
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/*utility class*/
+.hidden {
+  display: none;
+}
