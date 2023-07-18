@@ -77,7 +77,8 @@ form.addEventListener("submit", function (e) {
     } else if (input.name === "cardholder-name" && input.value !== "") {
       e.preventDefault();
       displayCardHolderName(input);
+    } else if (input.name === "card-number") {
+      console.log("hello");
     }
-    console.log(input.name === "card-number");
   });
 });
