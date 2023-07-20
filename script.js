@@ -154,5 +154,5 @@ form.addEventListener("submit", (event) => {
 //continue Btn
 // refreshes a page
 continueBtn.addEventListener("click", function () {
-  window.location.reload();
+  form.submit();
 });
