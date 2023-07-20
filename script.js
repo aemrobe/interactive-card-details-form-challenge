@@ -119,8 +119,6 @@ fields.forEach(function (field) {
       for (let i = 0; i < inputValue.length; i += 4) {
         chunks.push(inputValue.slice(i, i + 4));
       }
-      console.log();
-
       //display the value of the card number
       displayValue(field, chunks.join(" "));
     } else {
@@ -153,8 +151,8 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-//continueBtn
-//refreshes a page
+//continue Btn
+// refreshes a page
 continueBtn.addEventListener("click", function () {
   window.location.reload();
 });
