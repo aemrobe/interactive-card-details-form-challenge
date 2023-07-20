@@ -29,7 +29,10 @@
           <!--card information-->
           <div class="card__information">
             <p class="card__name">Jane Appleseed</p>
-            <p class="card__exp">00/00</p>
+            <p class="card__exp">
+              <span class="card__exp-month"></span>/
+              <span class="card__exp-year"></span>
+            </p>
           </div>
         </div>
 
@@ -50,6 +53,7 @@
             name="cardholder-name"
             id="name"
             placeholder="e.g. Jane Appleseed"
+            aria-invalid="false"
           />
         </div>
 
@@ -65,13 +69,14 @@
             name="card-number"
             id="number"
             placeholder="e.g. 1234  9123 0000 "
+            aria-invalid="false"
           />
         </div>
 
         <!--error message-->
         <p class="error-msg hidden">Wrong format, numbers</p>
 
-        <!--a div element which wrap the expite date and cvc-->
+        <!--a div element which wrap the expire date and cvc-->
         <div class="form-control-group">
           <!--form control-->
           <!--expire date-->
@@ -81,18 +86,31 @@
             <div class="input-border-wrapper">
               <input
                 type="text"
-                name="exp-date-month"
+                name="card-month"
                 id="exp-date"
                 placeholder="MM "
+                aria-invalid="false"
               />
             </div>
 
+            <!--error message-->
+            <p class="error-msg hidden error-card-month">
+              Wrong format, numbers
+            </p>
+
             <div class="input-border-wrapper">
-              <input type="text" name="exp-date-year" placeholder="YY" />
+              <input
+                type="text"
+                name="card-year"
+                placeholder="YY"
+                aria-invalid="false"
+              />
             </div>
 
             <!--error message-->
-            <p class="error-msg hidden">Wrong format, numbers</p>
+            <p class="error-msg hidden error-card-year">
+              Wrong format, numbers
+            </p>
           </div>
 
           <!--form-control-->
@@ -101,7 +119,13 @@
             <label for="cvc">CVC </label>
 
             <div class="input-border-wrapper">
-              <input type="text" name="CVC" placeholder="e.g. 123" id="cvc" />
+              <input
+                type="text"
+                name="CVC"
+                placeholder="e.g. 123"
+                id="cvc"
+                aria-invalid="false"
+              />
             </div>
 
             <!--error message-->
@@ -115,7 +139,7 @@
 
       <!-- Completed state start -->
 
-      <div class="thankyou">
+      <div class="thankyou hidden">
         <img
           src="images/icon-complete.svg"
           alt="complete image"
@@ -136,7 +160,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Aemro Bekalu</a>.
       </div>
     </footer>
 
