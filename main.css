@@ -35,9 +35,8 @@ body {
   font-size: var(--font-size-1);
   font-family: var(--font-ff-space-grotest-medium);
   min-height: 100vh;
-}
-
-main {
+  display: flex;
+  flex-direction: column;
 }
 
 .credit-card {
@@ -238,7 +237,8 @@ button {
 }
 
 footer {
-  margin-top: 5rem;
+  padding: 1.8rem 0;
+  margin-top: auto;
 }
 
 .attribution {
