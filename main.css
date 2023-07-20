@@ -148,15 +148,6 @@ label {
   padding: 0.1rem;
 }
 
-.error-card-month {
-  order: 1;
-}
-
-.error-card-year {
-  order: 2;
-  margin-left: auto;
-}
-
 .input-border-wrapper:focus-within {
   background: linear-gradient(to right, var(--linear-gradient-active-border));
 }
@@ -196,11 +187,18 @@ input::placeholder {
 .form-control:nth-child(1) {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .form-control:nth-child(1) label {
   width: 100%;
+}
+
+/*the element which contain the div input element and the error*/
+.container {
+  width: 50%;
+  min-width: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 label[for="exp-date"] ~ .input-border-wrapper {
@@ -212,8 +210,8 @@ label[for="exp-date"] ~ .input-border-wrapper {
   width: 100%;
 }
 
-.form-control:nth-child(1) .input-border-wrapper + .input-border-wrapper {
-  margin-left: 0.6rem;
+.form-control:nth-child(1) .container:nth-child(3) .input-border-wrapper {
+  margin-left: 1rem;
 }
 
 /* the second element which has a form-control class  */
@@ -282,14 +280,13 @@ footer {
   letter-spacing: 1px;
 }
 
-@media (max-width: 373px) {
-  /* the first elements which has a class of the form control*/
+@media (max-width: 366px) {
   .form-control:nth-child(1) {
     flex-direction: column;
   }
 
-  .error-card-month {
-    order: 0;
+  .form-control:nth-child(1) .container:nth-child(3) .input-border-wrapper {
+    margin-left: 0;
   }
 
   /* the second element which has a form-control class  */

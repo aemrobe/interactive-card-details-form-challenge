@@ -83,34 +83,38 @@
           <div class="form-control">
             <label for="exp-date">Exp. Date (MM/YY)</label>
 
-            <div class="input-border-wrapper">
-              <input
-                type="text"
-                name="card-month"
-                id="exp-date"
-                placeholder="MM "
-                aria-invalid="false"
-              />
+            <div class="container">
+              <div class="input-border-wrapper">
+                <input
+                  type="text"
+                  name="card-month"
+                  id="exp-date"
+                  placeholder="MM "
+                  aria-invalid="false"
+                />
+              </div>
+
+              <!--error message-->
+              <p class="error-msg hidden error-card-month">
+                Wrong format, numbers
+              </p>
             </div>
 
-            <!--error message-->
-            <p class="error-msg hidden error-card-month">
-              Wrong format, numbers
-            </p>
+            <div class="container">
+              <div class="input-border-wrapper">
+                <input
+                  type="text"
+                  name="card-year"
+                  placeholder="YY"
+                  aria-invalid="false"
+                />
+              </div>
 
-            <div class="input-border-wrapper">
-              <input
-                type="text"
-                name="card-year"
-                placeholder="YY"
-                aria-invalid="false"
-              />
+              <!--error message-->
+              <p class="error-msg hidden error-card-year">
+                Wrong format, numbers
+              </p>
             </div>
-
-            <!--error message-->
-            <p class="error-msg hidden error-card-year">
-              Wrong format, numbers
-            </p>
           </div>
 
           <!--form-control-->
