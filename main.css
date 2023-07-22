@@ -389,15 +389,6 @@ footer {
   }
 
   button {
-    margin-top: 2.7rem;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 2rem 1rem;
-    background: var(--very-dark-violet);
-    color: var(--Light-grayish-violet);
-    font-size: 1.5rem;
-
     padding: 1.8rem 1rem;
   }
 
@@ -410,10 +401,6 @@ footer {
 
   /*thankyou*/
   .thankyou {
-    width: 86%;
-    max-width: 32.2rem;
-    margin: 10rem auto 0;
-
     align-self: center;
     margin: 0 0 0 34.7rem;
     max-width: 38.2rem;

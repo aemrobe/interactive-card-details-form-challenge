@@ -155,4 +155,8 @@ form.addEventListener("submit", (event) => {
 // refreshes a page
 continueBtn.addEventListener("click", function () {
   form.submit();
+
+  fields.forEach(function (field) {
+    field.element.value = "";
+  });
 });
