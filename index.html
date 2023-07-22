@@ -18,155 +18,162 @@
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body>
-    <main>
-      <div class="credit-card">
-        <!--credit card front-->
-        <div class="card card--front">
-          <img src="./images/card-logo.svg" alt="logo" class="card__logo" />
+    <div class="wrapper">
+      <!--filler-->
+      <div class="filler"></div>
 
-          <p class="card__number">0000 0000 0000 0000</p>
+      <main>
+        <!--credit card-->
+        <div class="credit-card">
+          <!--credit card front-->
+          <div class="card card--front">
+            <img src="./images/card-logo.svg" alt="logo" class="card__logo" />
 
-          <!--card information-->
-          <div class="card__information">
-            <p class="card__name">Jane Appleseed</p>
-            <p class="card__exp">
-              <span class="card__exp-month"></span>/
-              <span class="card__exp-year"></span>
-            </p>
+            <p class="card__number">0000 0000 0000 0000</p>
+
+            <!--card information-->
+            <div class="card__information">
+              <p class="card__name">Jane Appleseed</p>
+              <p class="card__exp">
+                <span class="card__exp-month">00</span>/
+                <span class="card__exp-year">00</span>
+              </p>
+            </div>
+          </div>
+
+          <!--credit card back-->
+          <div class="card card--back">
+            <p class="card__number">000</p>
           </div>
         </div>
 
-        <!--credit card back-->
-        <div class="card card--back">
-          <p class="card__number">000</p>
-        </div>
-      </div>
+        <!--form-->
+        <form class="form" action="#">
+          <!--card holder name-->
+          <label for="name">Cardholder Name </label>
 
-      <!--form-->
-      <form class="form" action="#">
-        <!--card holder name-->
-        <label for="name">Cardholder Name </label>
+          <div class="input-border-wrapper">
+            <input
+              type="text"
+              name="cardholder-name"
+              id="name"
+              placeholder="e.g. Jane Appleseed"
+              aria-invalid="false"
+            />
+          </div>
 
-        <div class="input-border-wrapper">
-          <input
-            type="text"
-            name="cardholder-name"
-            id="name"
-            placeholder="e.g. Jane Appleseed"
-            aria-invalid="false"
-          />
-        </div>
+          <!--error message-->
+          <p class="error-msg hidden">Wrong format, numbers</p>
 
-        <!--error message-->
-        <p class="error-msg hidden">Wrong format, numbers</p>
+          <!--card number-->
+          <label for="number">Card Number </label>
 
-        <!--card number-->
-        <label for="number">Card Number </label>
+          <div class="input-border-wrapper">
+            <input
+              type="text"
+              name="card-number"
+              id="number"
+              placeholder="e.g. 1234  9123 0000 "
+              aria-invalid="false"
+            />
+          </div>
 
-        <div class="input-border-wrapper">
-          <input
-            type="text"
-            name="card-number"
-            id="number"
-            placeholder="e.g. 1234  9123 0000 "
-            aria-invalid="false"
-          />
-        </div>
+          <!--error message-->
+          <p class="error-msg hidden">Wrong format, numbers</p>
 
-        <!--error message-->
-        <p class="error-msg hidden">Wrong format, numbers</p>
+          <!--a div element which wrap the expire date and cvc-->
+          <div class="form-control-group">
+            <!--form control-->
+            <!--expire date-->
+            <div class="form-control">
+              <label for="exp-date">Exp. Date (MM/YY)</label>
 
-        <!--a div element which wrap the expire date and cvc-->
-        <div class="form-control-group">
-          <!--form control-->
-          <!--expire date-->
-          <div class="form-control">
-            <label for="exp-date">Exp. Date (MM/YY)</label>
+              <div class="container">
+                <div class="input-border-wrapper">
+                  <input
+                    type="text"
+                    name="card-month"
+                    id="exp-date"
+                    placeholder="MM "
+                    aria-invalid="false"
+                  />
+                </div>
 
-            <div class="container">
+                <!--error message-->
+                <p class="error-msg hidden error-card-month">
+                  Wrong format, numbers
+                </p>
+              </div>
+
+              <div class="container">
+                <div class="input-border-wrapper">
+                  <input
+                    type="text"
+                    name="card-year"
+                    placeholder="YY"
+                    aria-invalid="false"
+                  />
+                </div>
+
+                <!--error message-->
+                <p class="error-msg hidden error-card-year">
+                  Wrong format, numbers
+                </p>
+              </div>
+            </div>
+
+            <!--form-control-->
+            <div class="form-control">
+              <!--cvc-->
+              <label for="cvc">CVC </label>
+
               <div class="input-border-wrapper">
                 <input
                   type="text"
-                  name="card-month"
-                  id="exp-date"
-                  placeholder="MM "
+                  name="CVC"
+                  placeholder="e.g. 123"
+                  id="cvc"
                   aria-invalid="false"
                 />
               </div>
 
               <!--error message-->
-              <p class="error-msg hidden error-card-month">
-                Wrong format, numbers
-              </p>
-            </div>
-
-            <div class="container">
-              <div class="input-border-wrapper">
-                <input
-                  type="text"
-                  name="card-year"
-                  placeholder="YY"
-                  aria-invalid="false"
-                />
-              </div>
-
-              <!--error message-->
-              <p class="error-msg hidden error-card-year">
-                Wrong format, numbers
-              </p>
+              <p class="error-msg hidden">Wrong format, numbers</p>
             </div>
           </div>
 
-          <!--form-control-->
-          <div class="form-control">
-            <!--cvc-->
-            <label for="cvc">CVC </label>
+          <!--submit button-->
+          <button type="submit">Confirm</button>
+        </form>
 
-            <div class="input-border-wrapper">
-              <input
-                type="text"
-                name="CVC"
-                placeholder="e.g. 123"
-                id="cvc"
-                aria-invalid="false"
-              />
-            </div>
+        <!-- Completed state start -->
 
-            <!--error message-->
-            <p class="error-msg hidden">Wrong format, numbers</p>
-          </div>
+        <div class="thankyou hidden">
+          <img
+            src="images/icon-complete.svg"
+            alt="complete image"
+            class="complete-image"
+          />
+
+          <p class="thankyou__text">Thank you!</p>
+
+          <p class="thankyou_text-2">We've added your card details</p>
+
+          <!--submit button-->
+          <button class="thankyou__btn" type="submit">Continue</button>
         </div>
+      </main>
 
-        <!--submit button-->
-        <button type="submit">Confirm</button>
-      </form>
-
-      <!-- Completed state start -->
-
-      <div class="thankyou hidden">
-        <img
-          src="images/icon-complete.svg"
-          alt="complete image"
-          class="complete-image"
-        />
-
-        <p class="thankyou__text">Thank you!</p>
-
-        <p class="thankyou_text-2">We've added your card details</p>
-
-        <!--submit button-->
-        <button class="thankyou__btn" type="submit">Continue</button>
-      </div>
-    </main>
-
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Aemro Bekalu</a>.
-      </div>
-    </footer>
+      <!--footer-->
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Aemro Bekalu</a>.
+        </div>
+      </footer>
+    </div>
 
     <!--javascript-->
     <script src="script.js"></script>
