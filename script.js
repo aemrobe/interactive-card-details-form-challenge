@@ -18,10 +18,11 @@ const cardName = document.querySelector(".card__name");
 const cardNumber = document.querySelector(".card__number");
 const cardExpMonth = document.querySelector(".card__exp-month");
 const cardExpYear = document.querySelector(".card__exp-year");
+const cardCVC = document.querySelector(".card__number--back");
 
-//displaying the cardHolderName in the credit card image
+//displaying the credit card information in the credit card image
 const displayValue = function (field, value) {
-  field.cardElement && (field.cardElement.textContent = `${value}`);
+  field.cardElement.textContent = `${value}`;
 };
 
 // individual focussed validator functions. Test one condition each
@@ -105,7 +106,11 @@ const fields = [
     cardElement: cardExpYear,
     validators: [validateRequried, validateNumeric],
   },
-  { element: cvcField, validators: [validateRequried, validateNumeric] },
+  {
+    element: cvcField,
+    cardElement: cardCVC,
+    validators: [validateRequried, validateNumeric],
+  },
 ];
 
 //display the card details update in a real-time
@@ -127,7 +132,7 @@ fields.forEach(function (field) {
   });
 });
 
-//sumbmit handler
+//submit handler
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formErrors = [];

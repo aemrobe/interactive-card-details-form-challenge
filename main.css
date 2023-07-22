@@ -120,7 +120,7 @@ body {
   transform: translateY(3rem) translateX(2.8rem);
 }
 
-.card--back .card__number {
+.card__number--back {
   position: absolute;
   top: 50%;
   left: 100%;
@@ -367,9 +367,9 @@ footer {
     transform: translateY(15rem);
   }
 
-  .card--back .card__number {
+  .card__number--back {
     transform: translateX(-8rem) translateY(-50%);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   /*form*/
