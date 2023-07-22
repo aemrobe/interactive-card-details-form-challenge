@@ -348,7 +348,7 @@ footer {
     padding: 2.8rem 3.4rem 2.6rem 3.3rem;
     display: flex;
     flex-direction: column;
-    transform: translateY(-15rem);
+    transform: translateY(-14rem);
   }
 
   .card--front .card__number {
@@ -364,7 +364,7 @@ footer {
 
   .card--back {
     right: -22rem;
-    transform: translateY(15rem);
+    transform: translateY(14rem);
   }
 
   .card__number--back {
